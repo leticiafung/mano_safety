@@ -1,0 +1,66 @@
+html,body{
+    /*height: 100%;!*高度百分百显示*!*/
+    background-color: #f8f8f8;
+    padding:0;
+    margin:0;
+}
+
+header{
+    background-color: #1a2f4e;
+    height: 5rem;
+    color:#fafbff;
+    text-align: center;
+    padding-top: 1%;
+    font-family: 方正姚体;
+}
+header > p{
+    margin:0.5ex 0 0 0;
+    padding: 0;
+    font-size: 200%;
+}
+p >  span{
+    font-size: 50%;
+}
+.in{
+    width:60%;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px #888888;
+    position: relative;
+    left:20%;
+    margin-top: 6%;
+    height: 25em;
+}
+nav{
+    height:3em;
+    background: #f8f8f8;
+}
+#nav{
+    list-style :none;
+    margin:0;
+    padding:0;
+}
+#nav >li{
+    float: left;
+    color: #aeb2bb;
+    height: 2em;
+    padding: 0.8em 0.5em 0.2em;
+    text-align: center;
+    margin: 0;
+}
+li a{
+    text-decoration: none;
+    color: #63676f;
+    display: block;
+}
+li:active,a:active,.active,.active > a{
+    background-color: #414c5e;
+    color: white;
+}
+
+/*.input {*/
+    /*width:100%;*/
+    /*height: 80%;*/
+/*}*/
+/*.input > button {*/
+    /*display: inline-block;*/
+/*}*/

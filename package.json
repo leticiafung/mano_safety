@@ -1,0 +1,15 @@
+{
+  "name": "intent_mano_v2",
+  "version": "1.0.0",
+  "description": "mano version 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "leticia_fung",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
