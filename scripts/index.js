@@ -27,9 +27,9 @@ $(window).ready(()=>{
     //for test
     let hostmap = new Map([['host1','192.168.2.1'],['host2','1.1.1.10']]);
     let frag = document.createDocumentFragment();
-    let newOption = "<option value='1.1.1.10'>host2</option>";
+    let newOption = $("<option value='1.1.1.10'>host2</option>")[0];
     frag.appendChild(newOption);
-    $("select[name = 'host']").appendChild(frag);
+    $("select[name = 'host']").append(frag);
 
     //=========================================================
     $('#update_host').click(()=>{
@@ -42,11 +42,12 @@ $(window).ready(()=>{
                 //使用文档碎片
                 let frag = document.createDocumentFragment();
                 $.each(data, function(i, item) {
-                    let  newOption = '<option value=' + item.ip + '>'+ item.name + '</option>';
+                    let  newOption = $('<option value=' + item.ip + '>'+ item.name + '</option>')[0];
                     hostmap.set(item.name ,item.ip);
-                    frag.appendChild(newOption); //TODO
+                    frag.appendChild(newOption);
+                   // $("select[name = 'host']").append(newOption);
                 });
-                $("select[name = 'host']").appendChild(frag);
+                $("select[name = 'host']").append(frag);
             },
             error:function(){
                 alert('读取失败！');
@@ -58,11 +59,11 @@ $(window).ready(()=>{
     inobj.init();
     sfcNum++;
     $('#createsfc').click(()=>{
-        if($(select[name = 'host']).val() === 'none'){
+        if($("select[name = 'host']").val() === 'none'){
             alert('请输入安全需求主体！');
         }
         else{
-            inobj.destination = $(select[name = 'host']).val();
+            inobj.destination = $("select[name = 'host']").val();
             let instream  = $('#instream').val() || 100;
             inobj.setflavor();
             if($(select[name = 'perform']).val() !== 'none' ){
